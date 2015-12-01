@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "campaignchain/location-ezplatform": "dev-master"
     },
     "autoload": {
         "psr-4": { "CampaignChain\\Location\\EZPlatformBundle\\": "" }
