@@ -1,0 +1,19 @@
+fos_rest:
+    versioning:
+        enabled: true
+        default_version: v1
+        resolvers:
+            query:
+                enabled: false
+            custom_header:
+                enabled: false
+            media_type:
+                enabled: false
+    routing_loader:
+        default_format: json
+    param_fetcher_listener: true
+
+nelmio_api_doc:
+    name: CampaignChain API v1 (beta)
+    motd:
+        template: 'CampaignChainCoreBundle:REST:motd.html.twig'
