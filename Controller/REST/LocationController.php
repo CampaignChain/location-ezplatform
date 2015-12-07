@@ -27,7 +27,7 @@ class LocationController extends BaseController
      * Example Request
      * ===============
      *
-     *      GET /api/{version}/p/campaignchain/location-ezplatform/contents/objects
+     *      GET /api/{version}/p/campaignchain/location-ezplatform/objects
      *
      * Example Response
      * ================
@@ -49,7 +49,7 @@ class LocationController extends BaseController
      *  section="Packages: eZ Platform"
      * )
      */
-    public function getContentsObjectsAction()
+    public function getObjectsAction()
     {
         $qb = $this->getQueryBuilder();
         $qb->select(\CampaignChain\CoreBundle\Controller\REST\LocationController::SELECT_STATEMENT);
