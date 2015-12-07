@@ -35,7 +35,7 @@ class LocationController extends BaseController
         "response": [
             {
                 "id": 108,
-                "remoteId": "62",
+                "identifier": "62",
                 "name": "eZ Publish Tutorials",
                 "status": "unpublished",
                 "createdDate": "2015-12-01T09:37:39+0000",
