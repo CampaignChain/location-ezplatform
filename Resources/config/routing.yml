@@ -13,6 +13,5 @@ campaignchain_location_ezplatform_content_by_class_api:
 
 # REST routes are being created automatically via FOSRestBundle.
 campaignchain_location_ezplatform_rest:
-    type:     rest
-    prefix:   /api/{version}/p/campaignchain/location-ezplatform
-    resource: CampaignChain\Location\EZPlatformBundle\Controller\REST\LocationController
+    resource: "@CampaignChainLocationEZPlatformBundle/Resources/config/routing_rest.yml"
+    prefix: /api/v1/p/ccampaignchain/location-ezplatform
