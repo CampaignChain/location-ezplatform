@@ -10,7 +10,7 @@
 
 namespace CampaignChain\Location\EZPlatformBundle\Controller\REST;
 
-use CampaignChain\CoreBundle\Controller\REST\BaseController;
+use CampaignChain\CoreBundle\Controller\REST\BaseModuleController;
 use CampaignChain\CoreBundle\Entity\Location;
 use FOS\RestBundle\Controller\Annotations as REST;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,8 +19,16 @@ use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use FOS\RestBundle\Request\ParamFetcher;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
-class LocationController extends BaseController
+/**
+ * @REST\NamePrefix("campaignchain_location_ezplatform_rest_")
+ *
+ * Class LocationController
+ * @package CampaignChain\Location\EZPlatformBundle\Controller\REST
+ */
+class LocationController extends BaseModuleController
 {
+    const MODULE_URI = 'campaignchain/location-ezplatform/campaignchain-ezplatform-object';
+
     /**
      * Get a list of eZ Platform content object Locations.
      *
@@ -56,7 +64,7 @@ class LocationController extends BaseController
         $qb->from('CampaignChain\CoreBundle\Entity\Location', 'l');
         $qb->where('l.channel IS NULL');
         $qb->orderBy('l.name');
-        $qb = $this->getModuleRelation($qb, 'l.locationModule', 'campaignchain/location-ezplatform/campaignchain-ezplatform-object');
+        $qb = $this->getModuleRelation($qb, 'l.locationModule', self::MODULE_URI);
         $qb = $this->getLocationChannelId($qb);
         $query = $qb->getQuery();
 
