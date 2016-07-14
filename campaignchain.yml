@@ -3,10 +3,14 @@ modules:
     campaignchain-ezplatform-user:
         display_name: eZ Platform User
         description: Holds information about an eZ Platform user.
+        channels:
+            - campaignchain/channel-ezplatform/campaignchain-ezplatform
         hooks:
             default:
     campaignchain-ezplatform-object:
         display_name: eZ Platform Content Object
         description: Holds information about an eZ Platform content object.
+        channels:
+            - campaignchain/channel-ezplatform/campaignchain-ezplatform
         hooks:
             default:
